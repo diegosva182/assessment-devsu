@@ -39,12 +39,12 @@ stages:
 # STAGE: Docker Build & Push
 # ----------------------
 - stage: Docker
-  displayName: 'Docker Build and Push'
+  displayName: 'Docker Build, Scan and Push'
   dependsOn: Build
   condition: succeeded()
   jobs:
     - job: Docker
-      displayName: 'Build & Push Docker Image'
+      displayName: 'Build, Scan & Push Docker Image'
       steps:
         - task: Docker@2
           displayName: 'Docker Build & Push'
@@ -55,6 +55,14 @@ stages:
             Dockerfile: '**/Dockerfile'
             tags: |
               latest
+
+        - script: |
+            echo "Installing Trivy scanner..."
+            curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+
+            echo "Scanning image for HIGH/CRITICAL vulnerabilities..."
+            trivy image --no-progress --exit-code 0 --severity HIGH,CRITICAL $(dockerRepository):latest
+          displayName: 'Scan Docker Image with Trivy'
 # Optional kubernetes deployment to azure
         # - task: KubernetesManifest@1
         #   inputs:
