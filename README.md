@@ -199,3 +199,10 @@ minikube service devsu-node-service
 minReplicas: 2
 maxReplicas: 5
 targetCPUUtilizationPercentage: 70
+
+
+
+Reporte de Coverage en azure pipelines
+
+
+![Coverage](dcoumentacion/coverage.png)
