@@ -84,15 +84,16 @@ stages:
           displayName: 'Deploy Manifests to AKS'
           inputs:
             connectionType: 'Azure Resource Manager'
-            azureSubscriptionEndpoint: 'devsu-sp'
+            azureSubscription: 'devsu-sp'
             azureResourceGroup: 'rg-devsu-devops'
             kubernetesCluster: 'aks-devsu'
             namespace: 'default'
             command: apply
             useConfigurationFile: true
-            configuration: |
-              k8s/deployment.yaml
-              k8s/service.yaml
-              k8s/hpa.yaml
-              k8s/ingress.yaml
+            configurationFiles:
+              - k8s/deployment.yaml
+              - k8s/service.yaml
+              - k8s/hpa.yaml
+              - k8s/ingress.yaml
+
 
