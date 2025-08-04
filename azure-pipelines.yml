@@ -84,7 +84,7 @@ stages:
           displayName: 'Deploy Manifests to AKS'
           inputs:
             connectionType: 'Azure Resource Manager'
-            azureSubscription: 'SUBSCRIPTION_CONN_NAME'
+            azureSubscription: 'devsu-sp'
             azureResourceGroup: 'rg-devsu-devops'
             kubernetesCluster: 'aks-devsu'
             namespace: 'default'
