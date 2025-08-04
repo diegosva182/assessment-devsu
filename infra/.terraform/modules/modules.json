@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"aks","Source":"./modules/aks","Dir":"modules/aks"},{"Key":"network","Source":"./modules/network","Dir":"modules/network"},{"Key":"","Source":"","Dir":"."},{"Key":"acr","Source":"./modules/acr","Dir":"modules/acr"}]}
