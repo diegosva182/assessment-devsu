@@ -20,7 +20,9 @@ stages:
   displayName: 'Build & Test Node App'
   jobs:
     - job: Build
-      displayName: 'Install, Test, Lint'
+      displayName: 'Build Job'
+      pool:
+        vmImage: 'ubuntu-latest'
       steps:
         - task: NodeTool@0
           inputs:
@@ -29,11 +31,20 @@ stages:
 
         - script: |
             npm install
-            npm run test -- --coverage
+            npm run test -- --coverage --coverageReporters=cobertura
             if [ -f .eslintrc.js ] || [ -f .eslintrc.json ]; then
               npx eslint .
             fi
           displayName: 'Run Tests and Lint'
+
+        - task: PublishCodeCoverageResults@1
+          displayName: 'Publish Code Coverage'
+          inputs:
+            codeCoverageTool: Cobertura
+            summaryFileLocation: coverage/cobertura-coverage.xml
+            pathToSources: $(Build.SourcesDirectory)
+
+
 
 # ----------------------
 # STAGE: Docker Build & Push
