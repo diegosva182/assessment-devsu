@@ -5,8 +5,8 @@ trigger:
 
 variables:
   imageName: 'devsu-node-app'
-  dockerRegistryServiceConnection: 'DOCKER_HUB_CONN'  # nombre de la conexión en Azure
-  dockerRepository: 'tuusuario/devsu-node-app'        # reemplaza con tu DockerHub username
+  dockerRegistryServiceConnection: 'DOCKER_HUB_CONN'
+  dockerRepository: 'diegosva182/devsu-node-app'
 
 pool:
   vmImage: 'ubuntu-latest'
