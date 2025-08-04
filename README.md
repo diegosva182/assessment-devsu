@@ -172,7 +172,9 @@ Architecture
 
 <img width="657" height="430" alt="Image" src="https://github.com/user-attachments/assets/692fb3a3-f8a0-42c0-99e5-5fa5fb11e82a" />
 
+AZURE infra
 
+<img width="940" height="582" alt="Image" src="https://github.com/user-attachments/assets/5039bb33-7e08-4e2c-a2bd-47fe5e703598" />
 🧪 Manual API Testing
 You can test the API locally after running the container with using the local url http://localhost:8000 :
 
