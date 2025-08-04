@@ -140,7 +140,9 @@ If the response is unsuccessful, we will receive status 400 and the following me
 ## License
 
 Copyright © 2023 Devsu. All rights reserved.
+## Code Coverage Report
 
+<img width="1608" height="823" alt="Image" src="https://github.com/user-attachments/assets/bef270c2-7f14-4451-ba1c-7ed54216b75a" />
 
 🧪 Manual API Testing
 You can test the API locally after running the container with using the local url http://localhost:8000 :
@@ -205,8 +207,6 @@ targetCPUUtilizationPercentage: 70
 Reporte de Coverage en azure pipelines
 
 imagenes disponibles en documento en la carpeta documentacion
-## Code Coverage Report
 
-<img width="1608" height="823" alt="Image" src="https://github.com/user-attachments/assets/bef270c2-7f14-4451-ba1c-7ed54216b75a" />
 
 
