@@ -168,6 +168,10 @@ Test
 
 <img width="1197" height="635" alt="Image" src="https://github.com/user-attachments/assets/251a5385-b4b9-457c-9434-9c5bd8f3d647" />
 
+Architecture
+
+<img width="657" height="430" alt="Image" src="https://github.com/user-attachments/assets/692fb3a3-f8a0-42c0-99e5-5fa5fb11e82a" />
+
 
 🧪 Manual API Testing
 You can test the API locally after running the container with using the local url http://localhost:8000 :
