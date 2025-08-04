@@ -207,6 +207,6 @@ Reporte de Coverage en azure pipelines
 imagenes disponibles en documento en la carpeta documentacion
 ## Code Coverage Report
 
-![Coverage Screenshot](documentacion/coverage.png)
+<img width="1608" height="823" alt="Image" src="https://github.com/user-attachments/assets/bef270c2-7f14-4451-ba1c-7ed54216b75a" />
 
 
