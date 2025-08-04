@@ -205,5 +205,8 @@ targetCPUUtilizationPercentage: 70
 Reporte de Coverage en azure pipelines
 
 imagenes disponibles en documento en la carpeta documentacion
-<img width="1608" height="823" alt="coverage" src="https://github.com/user-attachments/assets/f6cda183-d242-4ed6-baa4-8665cf9b66b2" />
+## Code Coverage Report
+
+![Coverage Screenshot](documentacion/coverage.png)
+
 
