@@ -144,8 +144,37 @@ Copyright © 2023 Devsu. All rights reserved.
 
 <img width="1608" height="823" alt="Image" src="https://github.com/user-attachments/assets/bef270c2-7f14-4451-ba1c-7ed54216b75a" />
 
+Pipeline Structure
+
+<img width="823" height="823" alt="Image" src="https://github.com/user-attachments/assets/d71ea56c-6cfd-4095-a8d9-cb22671186cb" />
+
+Tests
+
+<img width="806" height="836" alt="Image" src="https://github.com/user-attachments/assets/df5b6496-3726-4b79-b57b-d188bd7572e1" />
+
+Docker push
+
+<img width="1608" height="810" alt="Image" src="https://github.com/user-attachments/assets/574c65ff-1c60-4c01-885e-44faa0cc24f5" />
+
+Vulnerabilities
+
+<img width="1291" height="832" alt="Image" src="https://github.com/user-attachments/assets/97102aa7-6003-4646-8932-ab31de01186b" />
+
+Minikube pods
+
+<img width="738" height="93" alt="Image" src="https://github.com/user-attachments/assets/ceab0d19-9d37-44db-8864-de1cda02140e" />
+
+Test
+
+<img width="1197" height="635" alt="Image" src="https://github.com/user-attachments/assets/251a5385-b4b9-457c-9434-9c5bd8f3d647" />
+
+
 🧪 Manual API Testing
 You can test the API locally after running the container with using the local url http://localhost:8000 :
+
+
+
+
 
 docker run -p 8000:8000 devsu-node-app
 🔸 Create a User
@@ -209,4 +238,9 @@ Reporte de Coverage en azure pipelines
 imagenes disponibles en documento en la carpeta documentacion
 
 
+## 🧪 Pruebas locales con Minikube
 
+Si estás usando Minikube con driver `docker`, puedes exponer el servicio para pruebas locales así:
+
+```bash
+kubectl port-forward service/devsu-node-service 8000:8000
