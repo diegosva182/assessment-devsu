@@ -55,3 +55,15 @@ stages:
             Dockerfile: '**/Dockerfile'
             tags: |
               latest
+# Optional kubernetes deployment to azure
+        # - task: KubernetesManifest@1
+        #   inputs:
+        #     action: deploy
+        #     kubernetesServiceConnection: 'conexion'
+        #     namespace: 'default'
+        #     manifests: |
+        #       k8s/deployment.yaml
+        #       k8s/service.yaml
+        #       k8s/hpa.yaml
+        #     containers: |
+        #       diegosva/devsu-node-app:latest

@@ -150,3 +150,52 @@ docker run -p 8000:8000 devsu-node-app
 curl -X POST http://localhost:8000/api/users \
   -H "Content-Type: application/json" \
   -d '{"dni": "1234567890", "name": "Diego Vaca"}'
+
+
+# DevOps Technical Assessment – Node.js App
+
+This project is part of the DevOps technical assessment. It includes:
+
+- Dockerization of a Node.js app
+- CI/CD pipeline using Azure DevOps
+- Deployment to Kubernetes (Minikube)
+- Manual API test examples
+- Horizontal Pod Autoscaler (HPA)
+
+---
+
+## 🐳 Docker
+
+### Build and run locally
+
+```bash
+docker build -t devsu-node-app .
+docker run -p 8000:8000 devsu-node-app
+⚙️ CI/CD with Azure DevOps
+
+CI/CD pipeline (azure-pipelines.yml) includes:
+
+Install & Test
+
+Lint (if ESLint config exists)
+
+Docker Build
+
+Push to DockerHub (tuusuario/devsu-node-app:latest)
+
+Pipeline runs on every push to master.
+
+
+☸️ Kubernetes Deployment (Minikube)
+Steps:
+
+minikube start --driver=docker
+kubectl config use-context minikube
+kubectl apply -f k8s/
+minikube service devsu-node-service
+
+🎯 HPA Configuration
+
+minReplicas: 2
+maxReplicas: 5
+targetCPUUtilizationPercentage: 70
