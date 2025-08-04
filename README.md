@@ -181,6 +181,7 @@ You can test the API locally after running the container with using the local ur
 
 
 infra as code is uploaded in infra folder, all is moduled 
+<img width="330" height="311" alt="Image" src="https://github.com/user-attachments/assets/ed985759-8850-458f-8e57-f80d19c0db15" />
 
 docker run -p 8000:8000 devsu-node-app
 🔸 Create a User
