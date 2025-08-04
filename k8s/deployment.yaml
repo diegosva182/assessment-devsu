@@ -14,9 +14,30 @@ spec:
     spec:
       containers:
         - name: app
-          image: diegosva182/devsu-node-app:latest
+          image: devsuacr.azurecr.io/devsu-node-app:latest
           ports:
             - containerPort: 8000
           env:
             - name: PORT
               value: "8000"
+          envFrom:
+            - configMapRef:
+                name: devsu-config
+            - secretRef:
+                name: devsu-secret
+          livenessProbe:
+            httpGet:
+              path: /api/users
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /api/users
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 2
+            failureThreshold: 3

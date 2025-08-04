@@ -124,3 +124,27 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform plan output
+*.tfplan
+
+# Terraform crash log
+crash.log
+
+# Terraform .terraform dir
+.terraform/
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# VS Code / Windows
+.vscode/
+*.log
+.DS_Store
+Thumbs.db

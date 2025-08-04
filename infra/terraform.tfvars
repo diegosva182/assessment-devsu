@@ -1,0 +1,6 @@
+resource_group_name = "rg-devsu-devops"
+location            = "East US"
+client_id       = "63acc16f-d6e8-42fc-b873-ce60f949e8e6"
+client_secret   = "bDa8Q~WmCGFoHHeDTomx7Mg0LV3s.Fzd3UzG_dxu"
+tenant_id       = "6cf1e2b1-f0f7-4b47-aff0-e328528a791b"
+subscription_id = "bc357c80-27b7-47d2-b143-448fef4903d7"
