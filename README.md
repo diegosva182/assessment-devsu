@@ -180,7 +180,7 @@ You can test the API locally after running the container with using the local ur
 
 
 
-
+infra as code is uploaded in infra folder, all is moduled 
 
 docker run -p 8000:8000 devsu-node-app
 🔸 Create a User
